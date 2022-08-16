@@ -1,0 +1,127 @@
+select
+distinct(casecount),
+sum(case
+    when ccr1 like '%File Submission Issue - RJR%' then 1
+    when ccr2 like '%File Submission Issue - RJR%' then 1
+    when ccr3 like '%File Submission Issue - RJR%' then 1
+    when ccr4 like '%File Submission Issue - RJR%' then 1
+    when ccr5 like '%File Submission Issue - RJR%' then 1
+    when ccr6 like '%File Submission Issue - RJR%' then 1
+    else 0 end) as "File Submission Issue - RJR",
+sum(case
+    when ccr1 like '%File Submission Issue - Altria%' then 1
+    when ccr2 like '%File Submission Issue - Altria%' then 1
+    when ccr3 like '%File Submission Issue - Altria%' then 1
+    when ccr4 like '%File Submission Issue - Altria%' then 1
+    when ccr5 like '%File Submission Issue - Altria%' then 1
+    when ccr6 like '%File Submission Issue - Altria%' then 1
+    else 0 end) as "File Submission Issue - Altria",
+sum(case
+    when ccr1 like '%Reporting Error - Multi-Pack / Multi-Can%' then 1
+    when ccr2 like '%Reporting Error - Multi-Pack / Multi-Can%' then 1
+    when ccr3 like '%Reporting Error - Multi-Pack / Multi-Can%' then 1
+    when ccr4 like '%Reporting Error - Multi-Pack / Multi-Can%' then 1
+    when ccr5 like '%Reporting Error - Multi-Pack / Multi-Can%' then 1
+    when ccr6 like '%Reporting Error - Multi-Pack / Multi-Can%' then 1
+    else 0 end) as "Reporting Error - Multi-Pack / Multi-Can",
+sum(case
+    when ccr1 like '%Reporting Error - Loyalty Fund (LFP)%' then 1
+    when ccr2 like '%Reporting Error - Loyalty Fund (LFP)%' then 1
+    when ccr3 like '%Reporting Error - Loyalty Fund (LFP)%' then 1
+    when ccr4 like '%Reporting Error - Loyalty Fund (LFP)%' then 1
+    when ccr5 like '%Reporting Error - Loyalty Fund (LFP)%' then 1
+    when ccr6 like '%Reporting Error - Loyalty Fund (LFP)%' then 1
+    else 0 end) as "Reporting Error - Loyalty Fund (LFP)",
+sum(case
+    when ccr1 like '%Connectivity Issues%' then 1
+    when ccr2 like '%Connectivity Issues%' then 1
+    when ccr3 like '%Connectivity Issues%' then 1
+    when ccr4 like '%Connectivity Issues%' then 1
+    when ccr5 like '%Connectivity Issues%' then 1
+    when ccr6 like '%Connectivity Issues%' then 1
+    else 0 end) as "Connectivity Issues",
+sum(case
+    when ccr1 like '%Promotions - Not Using Loyalty Fund (LFP)%' then 1
+    when ccr2 like '%Promotions - Not Using Loyalty Fund (LFP)%' then 1
+    when ccr3 like '%Promotions - Not Using Loyalty Fund (LFP)%' then 1
+    when ccr4 like '%Promotions - Not Using Loyalty Fund (LFP)%' then 1
+    when ccr5 like '%Promotions - Not Using Loyalty Fund (LFP)%' then 1
+    when ccr6 like '%Promotions - Not Using Loyalty Fund (LFP)%' then 1
+    else 0 end) as "Promotions - Not Using Loyalty Fund (LFP)",
+sum(case
+    when ccr1 like '%Promotions - Not Using Brand-Funded (BFP)%' then 1
+    when ccr2 like '%Promotions - Not Using Brand-Funded (BFP)%' then 1
+    when ccr3 like '%Promotions - Not Using Brand-Funded (BFP)%' then 1
+    when ccr4 like '%Promotions - Not Using Brand-Funded (BFP)%' then 1
+    when ccr5 like '%Promotions - Not Using Brand-Funded (BFP)%' then 1
+    when ccr6 like '%Promotions - Not Using Brand-Funded (BFP)%' then 1
+    else 0 end) as "Promotions - Not Using Brand-Funded (BFP)",
+sum(case
+    when ccr1 like '%Promotions - Not Relevant%' then 1
+    when ccr2 like '%Promotions - Not Relevant%' then 1
+    when ccr3 like '%Promotions - Not Relevant%' then 1
+    when ccr4 like '%Promotions - Not Relevant%' then 1
+    when ccr5 like '%Promotions - Not Relevant%' then 1
+    when ccr6 like '%Promotions - Not Relevant%' then 1
+    else 0 end) as "Promotions - Not Relevant",
+sum(case
+    when ccr1 like '%Low LFP Reimbursement%' then 1
+    when ccr2 like '%Low LFP Reimbursement%' then 1
+    when ccr3 like '%Low LFP Reimbursement%' then 1
+    when ccr4 like '%Low LFP Reimbursement%' then 1
+    when ccr5 like '%Low LFP Reimbursement%' then 1
+    when ccr6 like '%Low LFP Reimbursement%' then 1
+    else 0 end) as "Low LFP Reimbursement",
+sum(case
+    when ccr1 like '%Low Engage Payout%' then 1
+    when ccr2 like '%Low Engage Payout%' then 1
+    when ccr3 like '%Low Engage Payout%' then 1
+    when ccr4 like '%Low Engage Payout%' then 1
+    when ccr5 like '%Low Engage Payout%' then 1
+    when ccr6 like '%Low Engage Payout%' then 1
+    else 0 end) as "Low Engage Payout",
+sum(case
+    when ccr1 like '%Too Expensive%' then 1
+    when ccr2 like '%Too Expensive%' then 1
+    when ccr3 like '%Too Expensive%' then 1
+    when ccr4 like '%Too Expensive%' then 1
+    when ccr5 like '%Too Expensive%' then 1
+    when ccr6 like '%Too Expensive%' then 1
+    else 0 end) as "Too Expensive",
+sum(case
+    when ccr1 like '%Found Less Expensive Provider%' then 1
+    when ccr2 like '%Found Less Expensive Provider%' then 1
+    when ccr3 like '%Found Less Expensive Provider%' then 1
+    when ccr4 like '%Found Less Expensive Provider%' then 1
+    when ccr5 like '%Found Less Expensive Provider%' then 1
+    when ccr6 like '%Found Less Expensive Provider%' then 1
+    else 0 end) as "Found Less Expensive Provider",
+sum(case
+    when ccr1 like '%Other%' then 1
+    when ccr2 like '%Other%' then 1
+    when ccr3 like '%Other%' then 1
+    when ccr4 like '%Other%' then 1
+    when ccr5 like '%Other%' then 1
+    when ccr6 like '%Other%' then 1
+    else 0 end) as "Other"
+
+from(
+select
+distinct(casenumber) as casecount,
+split_part(customer_churn_rationale__c,';',1) as ccr1,
+split_part(customer_churn_rationale__c,';',2) as ccr2, 
+split_part(customer_churn_rationale__c,';',3) as ccr3, 
+split_part(customer_churn_rationale__c,';',4) as ccr4,
+split_part(customer_churn_rationale__c,';',5) as ccr5, 
+split_part(customer_churn_rationale__c,';',6) as ccr6
+
+
+
+from "PROD"."SALESFORCE"."CASE" b
+
+   -- on a.sfdc_account_id = b.accountid
+where churn_reason__C = 'Not Enough Value'
+and closeddate between '2022-01-01' and '2022-12-31'
+and types__c = 'Cancellation'
+and type_detail__c = 'Churn')
+group by casecount
